@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unit A &amp; B Walkthroughs</title>
+<meta name="description" content="Walk-through 3D models of two apartments on the 2nd–9th floor plan: Unit A faces north with a hill view, Unit B faces south with the real view from the site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one column; two unit cards side by side like sheets in a drawing set, stacking on phones */
+:root {
+  --bg: #eeede8;
+  --surface: #f9f8f4;
+  --ink: #1d1f1e;
+  --muted: #5c605a;
+  --hair: rgba(29, 31, 30, 0.14);
+  --redline: #b8382d;
+  --f-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #141615; --surface: #1d201e; --ink: #efeee9; --muted: #a9ada5; --hair: rgba(239, 238, 233, 0.14); --redline: #e0675b; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #141615; --surface: #1d201e; --ink: #efeee9; --muted: #a9ada5; --hair: rgba(239, 238, 233, 0.14); --redline: #e0675b; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 16px; padding-block: 40px 56px; display: grid; gap: 36px; }
+header { display: grid; gap: 10px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--redline); text-transform: uppercase; }
+h1 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(38px, 7vw, 64px); line-height: 0.98; letter-spacing: 0.005em; text-wrap: balance; }
+.lede { margin: 0; max-width: 62ch; color: var(--muted); }
+.units { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.unit { display: grid; grid-template-rows: auto 1fr; background: var(--surface); border: 1px solid var(--hair); min-width: 0; }
+.unit img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; max-width: 100%; border-bottom: 1px solid var(--hair); }
+.unit .body { display: grid; gap: 12px; padding: 18px 20px 22px; align-content: start; }
+.unit h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: 30px; line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; }
+.unit h2 small { display: block; margin-top: 6px; font-family: var(--f-mono); font-size: 12px; font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--muted); }
+.unit ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14.5px; }
+.open { justify-self: start; display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600; font-size: 14.5px; }
+.open:hover { background: var(--redline); }
+.open:focus-visible { outline: 2px solid var(--redline); outline-offset: 3px; }
+section h3 { margin: 0 0 10px; font-family: var(--f-display); font-weight: 600; font-size: 22px; text-transform: uppercase; letter-spacing: 0.04em; }
+.keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 24px; margin: 0; padding: 0; list-style: none; font-size: 14.5px; }
+.keys li { display: flex; gap: 10px; align-items: baseline; }
+kbd { font-family: var(--f-mono); font-size: 12px; padding: 1px 6px; border: 1px solid var(--hair); border-bottom-width: 2px; border-radius: 3px; background: var(--surface); white-space: nowrap; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.gallery figure { margin: 0; min-width: 0; }
+.gallery img { display: block; width: 100%; max-width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--hair); }
+.gallery figcaption { margin-top: 4px; font-size: 13px; color: var(--muted); }
+.notes { display: grid; gap: 8px; max-width: 72ch; color: var(--muted); font-size: 14.5px; }
+.notes p { margin: 0; }
+footer { font-family: var(--f-mono); font-size: 12px; color: var(--muted); border-top: 1px solid var(--hair); padding-top: 14px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">2nd–9th floor plan · two units · 9'-6" ceilings</div>
+    <h1>Walk through Unit A and Unit B</h1>
+    <p class="lede">Both flats are redesigned inside the original plan's boundaries. Each has four bedrooms with their own baths and an L-shaped balcony that every bedroom and the living room open onto, ending in a square adda corner. Floors are plain cement, walls textured grey, and every wall is dimensioned in feet.</p>
+  </header>
+
+  <div class="units">
+    <article class="unit">
+      <img src="previews/15_unitA_master_hill_view.jpg" alt="Unit A master bedroom looking north through floor-to-ceiling glass at layered green hills" loading="lazy">
+      <div class="body">
+        <h2>Unit A<small>North-facing · hill view</small></h2>
+        <ul>
+          <li>Layered hill ranges to the north (a generated view)</li>
+          <li>Morning sun on the east glass, even north light all day</li>
+          <li>Forest, olive and clay accent walls</li>
+        </ul>
+        <a class="open" href="Unit_A_North_Hill_View.html">Open Unit A →</a>
+      </div>
+    </article>
+    <article class="unit">
+      <img src="previews/11_unitB_master_real_south_view.jpg" alt="Unit B master bedroom looking south at a red-brick house with hanging greenery, from the site video" loading="lazy">
+      <div class="body">
+        <h2>Unit B<small>South-facing · real view from the site</small></h2>
+        <ul>
+          <li>Window views stitched from a site video shot on this floor</li>
+          <li>The balcony slab above shades the south glass in summer</li>
+          <li>Terracotta, sage and slate accent walls</li>
+        </ul>
+        <a class="open" href="Unit_B_South_Real_View.html">Open Unit B →</a>
+      </div>
+    </article>
+  </div>
+
+  <section>
+    <h3>Getting around</h3>
+    <ul class="keys">
+      <li><kbd>↑</kbd><kbd>↓</kbd> walk forward or back</li>
+      <li><kbd>←</kbd><kbd>→</kbd> turn left or right</li>
+      <li>Drag to look around</li>
+      <li><kbd>V</kbd> back to eye level, straight ahead</li>
+      <li>Click or <kbd>E</kbd> doors, sliders, curtains</li>
+      <li><kbd>N</kbd> day or night, all lights on</li>
+      <li><kbd>M</kbd> dimensions · <kbd>I</kbd> design notes</li>
+      <li><kbd>O</kbd> cut-away overview of the whole flat</li>
+    </ul>
+    <p class="notes" style="margin-top:10px">Best on a laptop or desktop with a keyboard. On phones, use the on-screen arrows and drag to look.</p>
+  </section>
+
+  <section>
+    <h3>Inside</h3>
+    <div class="gallery">
+      <figure><img src="previews/10_unitB_overview.jpg" alt="Cut-away overview of Unit B showing all rooms and the L-shaped balcony" loading="lazy"><figcaption>Unit B from above</figcaption></figure>
+      <figure><img src="previews/12_unitB_adda_square.jpg" alt="The adda square with an L-shaped bench, cushions and string lights under a teak-slat ceiling" loading="lazy"><figcaption>The adda square</figcaption></figure>
+      <figure><img src="previews/13_unitB_living_night.jpg" alt="Living room at night with the sunken lounge and warm lighting" loading="lazy"><figcaption>Sunken lounge at night</figcaption></figure>
+      <figure><img src="previews/14_unitB_boho_bedroom.jpg" alt="Boho bedroom with a rattan egg chair and plants by the glass doors to the adda" loading="lazy"><figcaption>Boho bedroom</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="notes">
+    <h3>About the model</h3>
+    <p>Unit boundaries are read from a photo of the 2nd–9th floor presentation plan (construction area 4,818 sq ft): about 50'-0" × 47'-0" per unit, minus the stair and lift core. Dimensions are wall centre-lines.</p>
+    <p>The sunken lounge drops 1'-6" and needs a lowered slab in the structural design.</p>
+  </section>
+
+  <footer>Built with three.js. The 3D library loads from jsDelivr, so the pages need an internet connection.</footer>
+</main>
+</body>
+</html>
